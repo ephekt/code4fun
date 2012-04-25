@@ -1,18 +1,15 @@
 <?php
 
 function substring($haystack,$needle) {
+	if("" == $needle) { return true; }
 	echo "Haystack:\n$haystack\n";
     echo "Needle:\n$needle\n";
-	// iterate over the the haystack until the first char
-	// of the needle is in the haystack
 	
 	for($i=0,$len=strlen($haystack);$i<$len;$i++){
 		if($needle[0] == $haystack[$i]) {
 			$found = true;
 			for($j=0,$slen=strlen($needle);$j<$slen;$j++) {
-				// two ways to check if we have exceeded our length
-				if($len-$j <= 0) {
-				//if($j >= $len) {
+				if($j >= $len) {
 					echo "reached end of haystack but have more needles";
 					return false;
 				}
