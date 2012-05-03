@@ -74,10 +74,17 @@ class LinkedList
     previous = nil
 
     until current.next.nil?
-      next_node = current.next # save next node
-      current.next = previous # point back to the last node
-      previous = current # update last node to this one
+      # save next node
+      next_node = current.next
       
+      ## do the swap
+      
+      # point back to the last node
+      current.next = previous
+      # update last node to this one
+      previous = current
+      
+      # continue
       current = next_node
       # puts "#{previous || "N/A"} -> #{current} -> #{current.next}"
     end
