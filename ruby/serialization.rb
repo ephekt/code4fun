@@ -1,6 +1,6 @@
 =begin
   The class: AdvertiserTargeting is an ActiveRecord model who has some columns
-  stored in the database as Base64 encoded date. Upon instantiation, ActiveRecord
+  stored in the database as Base64 encoded data. Upon instantiation, ActiveRecord
   takes these columns and stores them as attributes.
 
   The task: Rewrite this class in multiple ways (at least 2). Currently, on class
